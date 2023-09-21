@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Login</title>
+</head>
+<script>
+    function check(form){
+        if(form.user.value == "admin" && form.pword.value == "0000"){
+            window.close('index.html')
+            window.open('math.html')
+        }
+        else{
+            alert("Acount Not Found")
+        }
+    }
+</script>
+<body>
+    <div class="container">
+            <div class="login__content">
+                <img src="img/sdfvas.GIF" alt="login image" class="login__img">
+
+                <form action="" class="login__form">
+                    <div>
+                        <h1 class="login__title">
+                            <span>Online</span> Calculator!
+                        </h1>
+                        <p class="login__description">
+                            Welcome! Please login to able to use the calculator.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <div class="login__inputs">
+                            <div>
+                                <label for="" class="login__label">Username</label>
+                                <input type="text" name="user" placeholder="Username" >
+                            </div>
+    
+                            <div>
+                                <label for="" class="login__label">Password</label>
+    
+                                <div class="login__box">
+                                    <input type="password" name="pword" placeholder="Password">
+                                    <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="login__check">
+                            <input type="checkbox" class="login__check-input">
+                            <label for="" class="login__check-label">Remember me</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="login__buttons">
+                            <button type="submit" onclick="check(this.form)" class="login__button">Log In</button>
+                            <button class="login__button login__button-ghost">Sign Up</button>
+                        </div>
+
+                        <a href="#" class="login__forgot">Forgot Password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome To The Calculator</h1>
+
+    <button type="button" onclick="logout()">Logout</button>
+
+    <br>
+    <br>
+
+    <div class="div1">
+        <h1>Javascript Variable</h1>
+
+        <p>The Result of adding 5 + 2 + 3 is :</p>
+        <p id="demo1"></p>
+        <button type="button" onclick="adding()">Show Result</button>
+
+        <script>
+            function adding() {
+                let x = 5 + 2 + 3;
+                document.getElementById('demo1').innerHTML = x;
+            }
+        </script>
+        <br>
+        <br>
+        <hr>
+        <br>
+
+        <h3>Adding Two numbers:</h3>
+		<input type="number" id="num1">
+		<input type="number" id="num2">
+		<button type="button" onclick="addnum()">Add</button>
+		<p>The Sum is: </p><p id="demo2"></p>
+
+		<script>
+    		function addnum() {
+        		let input1 = parseInt(document.getElementById('num1').value);
+        		let input2 = parseInt(document.getElementById('num2').value);
+
+        
+        		if (!isNaN(input1) && !isNaN(input2)) {
+            		let x = input1 + input2;
+            		document.getElementById("demo2").innerHTML = x;
+        		} else {
+           
+            	document.getElementById("demo2").innerHTML = "Invalid input. Please enter valid numbers.";
+        	}
+    	}
+		</script>
+
+
+        <br>
+        <br>
+        <hr>
+        <br>
+
+        <h3>Subtracting Two numbers:</h3>
+		<input type="number" id="num11">
+		<input type="number" id="num22">
+		<button type="button" onclick="subnum()">Subtract</button>
+		<p>The Difference is: </p><p id="demo3"></p>
+
+		<script>
+    		function subnum() {
+        		let input1 = document.getElementById('num11').value;
+        		let input2 = document.getElementById('num22').value;
+
+        
+        	if (!isNaN(input1) && !isNaN(input2)) {
+            	let a = parseInt(input1);
+            	let b = parseInt(input2);
+            	let x = a - b;
+            	document.getElementById("demo3").innerHTML = x;
+        	} else {
+            
+            document.getElementById("demo3").innerHTML = "Invalid input. Please enter valid numbers.";
+        		}
+    	}
+		</script>
+
+
+        <br>
+        <br>
+        <hr>
+        <br>
+
+        <h3>Multiplying Two numbers:</h3>
+		<input type="number" id="num14">
+		<input type="number" id="num25">
+		<button type="button" onclick="mulnum()">Multiply</button>
+		<p>The Product is: </p><p id="demo4"></p>
+
+		<script>
+    		function mulnum() {
+        		let input1 = document.getElementById('num14').value;
+        		let input2 = document.getElementById('num25').value;
+
+        
+        		if (!isNaN(input1) && !isNaN(input2)) {
+            		let a = parseInt(input1);
+            		let b = parseInt(input2);
+            		let x = a * b;
+            	document.getElementById("demo4").innerHTML = x;
+        	} else {
+            document.getElementById("demo4").innerHTML = "Invalid input. Please enter valid numbers.";
+        		}
+    	}
+		</script>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+
+        <h3>Dividing Two numbers:</h3>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <button type="button" onclick="divnum()">Divide</button>
+        <p>The Quotient is: </p><p id="demo5"></p>
+
+        <script>
+            function divnum() {
+                let a = parseInt(document.getElementById('num1').value);
+                let b = parseInt(document.getElementById('num2').value);
+                let x = a / b;
+                document.getElementById("demo5").innerHTML = x;
+            }
+        </script>
+    </div>
+
+    <script>
+        function logout() {
+            let response = confirm("Logging out?");
+
+            if (response) {
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html>
